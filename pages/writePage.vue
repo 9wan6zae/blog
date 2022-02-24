@@ -63,15 +63,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-html, body {
-  margin: 0
-}
-
-* {
-  box-sizing: border-box;
-}
-
+<style lang="scss" scoped>
 #title-input {
   width: 100%;
   outline: none;
