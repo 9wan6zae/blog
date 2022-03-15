@@ -1,5 +1,5 @@
 <template>
-  <div class="vsbtwn" :style="{width, height}">
+  <div class="hstack" :style="{width, height, justifyContent, alignItems}">
     <slot></slot>
   </div>
 </template>
@@ -14,16 +14,23 @@ export default {
     height: {
       type: String,
       default: '100%'
+    },
+    justifyContent: {
+      type: String,
+      default: 'flex-start'
+    },
+    alignItems: {
+      type: String,
+      default: 'flex-start'
     }
   }
 }
 </script>
 
 <style scoped>
-.vsbtwn {
+.hstack {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
 }
 </style>
