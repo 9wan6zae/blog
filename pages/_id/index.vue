@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>{{id}}</p>
     <div id="wrapper">
       <main>
         <profile
