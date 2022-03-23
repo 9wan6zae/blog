@@ -16,7 +16,7 @@ export default {
     return {
       contents: [
         {
-          id: 0,
+          id: '0',
           img: 'http://blog.jinbo.net/attach/615/200937431.jpg',
           title:
             '[Node.js] npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까',
@@ -26,7 +26,7 @@ export default {
           like: 17,
         },
         {
-          id: 1,
+          id: '1',
           img: '',
           title: 'npm은 무엇일까',
           description: 'ttt',
@@ -34,7 +34,7 @@ export default {
           like: 17,
         },
         {
-          id: 2,
+          id: '2',
           img: '',
           title: 'npm은 무엇일까',
           description: 'ttt',
@@ -42,7 +42,7 @@ export default {
           like: 17,
         },
         {
-          id: 3,
+          id: '3',
           img: '',
           title: 'npm은 무엇일까',
           description: 'ttt',
@@ -50,7 +50,7 @@ export default {
           like: 17,
         },
         {
-          id: 4,
+          id: '4',
           img: '',
           title: 'npm은 무엇일까',
           description: 'ttt',

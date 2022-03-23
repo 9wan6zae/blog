@@ -18,10 +18,23 @@ export default {
       nickname: '',
     }
   },
+  watch: {
+    '$route' (to, from) {
+      this.setNickname(to.path)
+    }
+  },
   mounted() {
-    const pathname = window.location.pathname.slice(2)
-    if (pathname) {
-      this.nickname = pathname
+    const pathname = this.$route.path
+    this.setNickname(pathname)
+  },
+  methods: {
+    setNickname(pathname) {
+      pathname = this.$route.path.slice(2)
+      if (pathname) {
+        this.nickname = pathname.split('/')[0]
+      } else {
+        this.nickname = ''
+      }
     }
   },
 }

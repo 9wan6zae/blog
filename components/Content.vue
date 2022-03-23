@@ -1,23 +1,29 @@
 <template>
-  <article data-test="content">
-    <figure v-if="img" data-test="content-thumbnail">
-      <img :src="img" />
-    </figure>
-    <section id="content-section">
-      <p id="title" data-test="content-title">{{ title }}</p>
-      <p id="description" data-test="content-description">{{ description }}</p>
-    </section>
-    <footer>
-      <p data-test="content-author">by {{ author }}</p>
-      <p data-test="content-like">{{ like }}</p>
-    </footer>
-  </article>
+  <nuxt-link :to="`/@${author}/${id}`">
+    <article data-test="content">
+      <figure v-if="img" data-test="content-thumbnail">
+        <img :src="img" />
+      </figure>
+      <section id="content-section">
+        <p id="title" data-test="content-title">{{ title }}</p>
+        <p id="description" data-test="content-description">{{ description }}</p>
+      </section>
+      <footer>
+        <p data-test="content-author">by {{ author }}</p>
+        <p data-test="content-like">{{ like }}</p>
+      </footer>
+    </article>
+  </nuxt-link>
 </template>
 
 <script>
 export default {
   name: 'ContentComponent',
   props: {
+    id: {
+      type: String,
+      default: '',
+    },
     img: {
       type: String,
       default: '',
