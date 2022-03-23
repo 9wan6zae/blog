@@ -11,7 +11,7 @@
             placeholder="제목을 입력하세요"
           />
         </form>
-        <button data-test="img-add-btn" @click="addImage" >test</button>
+        <button data-test="img-add-btn" @click="addImage">test</button>
         <textarea
           id="markdown-editor"
           ref="markdownEditor"
@@ -40,24 +40,24 @@ export default {
       input: '',
       postTitle: '',
       url: 'http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg',
-    };
+    }
   },
   computed: {
     compiledMarkdown() {
-      return marked(this.input);
+      return marked(this.input)
     },
   },
   methods: {
     update: _.debounce(function (e) {
-      this.input = e.target.value;
+      this.input = e.target.value
     }, 300),
     addImage(imgInfo) {
-      const editor = this.$refs.markdownEditor;
-      const original = editor.value;
-      const front = original.substring(0, editor.selectionStart);
-      const end = original.substring(editor.selectionStart, original.length);
+      const editor = this.$refs.markdownEditor
+      const original = editor.value
+      const front = original.substring(0, editor.selectionStart)
+      const end = original.substring(editor.selectionStart, original.length)
 
-      this.input = `${front}![](${this.url})${end}`;
+      this.input = `${front}![](${this.url})${end}`
     },
   },
 }
@@ -73,7 +73,7 @@ export default {
   color: #fff;
 
   &::placeholder {
-    color: #8F9090
+    color: #8f9090;
   }
 }
 
@@ -96,7 +96,7 @@ export default {
   max-width: 720px;
 }
 
-#markdown-editor{
+#markdown-editor {
   width: 100%;
   max-width: 50vw;
   height: 50vh;
@@ -123,11 +123,11 @@ export default {
   outline: none;
   background-color: #f6f6f6;
   font-size: 14px;
-  font-family: "Monaco", courier, monospace;
+  font-family: 'Monaco', courier, monospace;
   padding: 20px;
 }
 
 code {
-  color: red
+  color: red;
 }
 </style>

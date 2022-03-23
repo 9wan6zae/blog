@@ -43,7 +43,9 @@ describe('WritePage', () => {
 
       await flushPromises
 
-      expect(wrapper.get('[data-test="viewer"]').html()).toContain(`<h3 id="test">test</h3>`)
+      expect(wrapper.get('[data-test="viewer"]').html()).toContain(
+        `<h3 id="test">test</h3>`
+      )
     })
   })
 })

@@ -1,15 +1,11 @@
 <template>
   <section data-test="ContentList">
-    <Content
-      v-for="item in contents"
-      :key="item.id"
-      v-bind="item"
-    />
+    <Content v-for="item in contents" :key="item.id" v-bind="item" />
   </section>
 </template>
 
 <script>
-import Content from "./Content.vue"
+import Content from './Content.vue'
 
 export default {
   name: 'ContentList',
@@ -19,8 +15,8 @@ export default {
       type: Array,
       default: () => {
         return []
-      }
-    }
+      },
+    },
   },
 }
 </script>

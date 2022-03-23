@@ -3,13 +3,13 @@
     <h-stack height="140px" justify-content="space-between">
       <v-stack justify-content="space-between">
         <div>
-          <p class="title">{{title}}</p>
-          <p class="description">{{description}}</p>
+          <p class="title">{{ title }}</p>
+          <p class="description">{{ description }}</p>
         </div>
         <h-stack class="post-info" height="20px" align-items="center">
-          <p class="category">{{category}}</p>
+          <p class="category">{{ category }}</p>
           <div class="divider" />
-          <p class="createdAt">{{createdAt}}</p>
+          <p class="createdAt">{{ createdAt }}</p>
         </h-stack>
       </v-stack>
       <img class="thumbnail" :src="thumbnail" />
@@ -27,29 +27,29 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '',
     },
-    description:  {
+    description: {
       type: String,
-      default: ''
+      default: '',
     },
-    thumbnail:  {
+    thumbnail: {
       type: String,
-      default: ''
+      default: '',
     },
-    category:  {
+    category: {
       type: String,
-      default: ''
+      default: '',
     },
-    author:  {
+    author: {
       type: String,
-      default: ''
+      default: '',
     },
-    createdAt:  {
+    createdAt: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
 </script>
 
@@ -73,7 +73,7 @@ export default {
   line-height: 20px;
   letter-spacing: -0.03em;
 
-  color: #D2D3D3;
+  color: #d2d3d3;
 }
 
 .thumbnail {
@@ -87,15 +87,15 @@ export default {
 }
 
 .post-info > p {
-  margin: 0 10px
+  margin: 0 10px;
 }
 
 .post-info > p:first-child {
-  margin-left: 0px
+  margin-left: 0px;
 }
 
 .post-info > p:last-child {
-  margin-right: 0px
+  margin-right: 0px;
 }
 
 .category {
@@ -104,7 +104,7 @@ export default {
   line-height: 20px;
   letter-spacing: -0.03em;
 
-  color: #2BDD5D;
+  color: #2bdd5d;
 }
 
 .createdAt {
@@ -113,15 +113,15 @@ export default {
   line-height: 20px;
   letter-spacing: -0.03em;
 
-  color: #A6A6A7;
+  color: #a6a6a7;
 }
 
 .divider {
   width: 1px;
-height: 15px;
-left: 670px;
-top: 664px;
+  height: 15px;
+  left: 670px;
+  top: 664px;
 
-background: #36373C;
+  background: #36373c;
 }
 </style>

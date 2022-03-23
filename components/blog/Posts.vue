@@ -1,11 +1,10 @@
 <template>
   <div class="posts-wrapper">
-    <p class="noti">총 <span style="color: #2BDD5D">{{posts.length}}</span>개의 포스팅이 존재합니다</p>
-    <post
-      v-for="post in posts"
-      :key="post.id"
-      v-bind="post"
-    />
+    <p class="noti">
+      총 <span style="color: #2bdd5d">{{ posts.length }}</span
+      >개의 포스팅이 존재합니다
+    </p>
+    <post v-for="post in posts" :key="post.id" v-bind="post" />
   </div>
 </template>
 
@@ -19,9 +18,9 @@ export default {
       type: Array,
       default: () => {
         return []
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

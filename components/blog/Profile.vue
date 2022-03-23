@@ -4,9 +4,9 @@
       <img id="profile-img" :src="profileImg" alt="profile-img" />
       <div>
         <div>
-          <p id="nickname">{{nickname}}</p>
+          <p id="nickname">{{ nickname }}</p>
         </div>
-        <p id="introduce">{{introduce}}</p>
+        <p id="introduce">{{ introduce }}</p>
       </div>
     </section>
   </div>
@@ -18,21 +18,21 @@ export default {
   props: {
     nickname: {
       type: String,
-      default: ''
+      default: '',
     },
     introduce: {
       type: String,
-      default: ''
+      default: '',
     },
     profileImg: {
       type: String,
-      default: ''
+      default: '',
     },
     githubUrl: {
       type: String,
-      default: ''
+      default: '',
     },
-  }
+  },
 }
 </script>
 

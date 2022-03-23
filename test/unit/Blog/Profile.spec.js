@@ -3,9 +3,9 @@ import Profile from '@/components/blog/Profile.vue'
 
 describe('Profile.vue', () => {
   test('컴포넌트 렌더링', () => {
-    const wrapper = mount(Profile);
+    const wrapper = mount(Profile)
 
-    expect(wrapper.find('#profile').exists()).toBeTruthy();
+    expect(wrapper.find('#profile').exists()).toBeTruthy()
   })
 
   test('필요한 요소를 렌더링하는지', () => {
@@ -20,13 +20,15 @@ describe('Profile.vue', () => {
     const propsData = {
       nickname: 'tester',
       introduce: 'testtest',
-      profileImg: 'testimg'
+      profileImg: 'testimg',
     }
     const wrapper = mount(Profile, {
-      propsData
+      propsData,
     })
 
-    expect(wrapper.find('#profile-img').attributes('src')).toBe(propsData.profileImg)
+    expect(wrapper.find('#profile-img').attributes('src')).toBe(
+      propsData.profileImg
+    )
     expect(wrapper.find('#nickname').text()).toBe(propsData.nickname)
     expect(wrapper.find('#introduce').text()).toBe(propsData.introduce)
   })

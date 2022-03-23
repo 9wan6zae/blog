@@ -3,9 +3,9 @@ import Post from '@/components/blog/Post.vue'
 
 describe('Post.vue', () => {
   test('컴포넌트 렌더링', () => {
-    const wrapper = mount(Post);
+    const wrapper = mount(Post)
 
-    expect(wrapper.find('.post-wrapper').exists()).toBeTruthy();
+    expect(wrapper.find('.post-wrapper').exists()).toBeTruthy()
   })
 
   test('필요한 요소를 렌더링하는지', () => {
@@ -24,16 +24,18 @@ describe('Post.vue', () => {
       description: 'testtest',
       thumbnail: 'testimg',
       category: 'test',
-      createdAt: '2022-02-02'
+      createdAt: '2022-02-02',
     }
     const wrapper = mount(Post, {
-      propsData
+      propsData,
     })
 
     expect(wrapper.find('.title').text()).toBe(propsData.title)
     expect(wrapper.find('.description').text()).toBe(propsData.description)
     expect(wrapper.find('.category').text()).toBe(propsData.category)
     expect(wrapper.find('.createdAt').text()).toBe(propsData.createdAt)
-    expect(wrapper.find('.thumbnail').attributes('src')).toBe(propsData.thumbnail)
+    expect(wrapper.find('.thumbnail').attributes('src')).toBe(
+      propsData.thumbnail
+    )
   })
 })

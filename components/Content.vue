@@ -4,12 +4,12 @@
       <img :src="img" />
     </figure>
     <section id="content-section">
-      <p id="title" data-test="content-title">{{title}}</p>
-      <p id="description" data-test="content-description">{{description}}</p>
+      <p id="title" data-test="content-title">{{ title }}</p>
+      <p id="description" data-test="content-description">{{ description }}</p>
     </section>
     <footer>
-      <p data-test="content-author">by {{author}}</p>
-      <p data-test="content-like">{{like}}</p>
+      <p data-test="content-author">by {{ author }}</p>
+      <p data-test="content-like">{{ like }}</p>
     </footer>
   </article>
 </template>
@@ -20,25 +20,25 @@ export default {
   props: {
     img: {
       type: String,
-      default: ''
+      default: '',
     },
     title: {
       type: String,
-      default: ''
+      default: '',
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     author: {
       type: String,
-      default: ''
+      default: '',
     },
     like: {
       type: Number,
-      default: 0
+      default: 0,
     },
-  }
+  },
 }
 </script>
 
@@ -67,7 +67,7 @@ article {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
-      height: auto
+      height: auto;
     }
   }
 

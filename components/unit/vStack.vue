@@ -1,5 +1,5 @@
 <template>
-  <div class="vstack" :style="{width, height, justifyContent, alignItems}">
+  <div class="vstack" :style="{ width, height, justifyContent, alignItems }">
     <slot></slot>
   </div>
 </template>
@@ -9,21 +9,21 @@ export default {
   props: {
     width: {
       type: String,
-      default: '100%'
+      default: '100%',
     },
     height: {
       type: String,
-      default: '100%'
+      default: '100%',
     },
     justifyContent: {
       type: String,
-      default: 'flex-start'
+      default: 'flex-start',
     },
     alignItems: {
       type: String,
-      default: 'flex-start'
-    }
-  }
+      default: 'flex-start',
+    },
+  },
 }
 </script>
 

@@ -2,9 +2,7 @@
   <div id="wrapper">
     <main>
       <h1>블로그</h1>
-      <content-list
-        :contents="contents"
-      />
+      <content-list :contents="contents" />
     </main>
   </div>
 </template>
@@ -20,10 +18,12 @@ export default {
         {
           id: 0,
           img: 'http://blog.jinbo.net/attach/615/200937431.jpg',
-          title: '[Node.js] npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까',
-          description: 'npm은 node.js에서 만든 패키니 매니저입니다 npm은 node.js에서 만든 패키니 매니저입니다 npm은 node.js에서 만든 패키니 매니저입니다',
+          title:
+            '[Node.js] npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까 npm은 무엇일까',
+          description:
+            'npm은 node.js에서 만든 패키니 매니저입니다 npm은 node.js에서 만든 패키니 매니저입니다 npm은 node.js에서 만든 패키니 매니저입니다',
           author: 'tester',
-          like: 17
+          like: 17,
         },
         {
           id: 1,
@@ -31,7 +31,7 @@ export default {
           title: 'npm은 무엇일까',
           description: 'ttt',
           author: 'tester',
-          like: 17
+          like: 17,
         },
         {
           id: 2,
@@ -39,7 +39,7 @@ export default {
           title: 'npm은 무엇일까',
           description: 'ttt',
           author: 'tester',
-          like: 17
+          like: 17,
         },
         {
           id: 3,
@@ -47,7 +47,7 @@ export default {
           title: 'npm은 무엇일까',
           description: 'ttt',
           author: 'tester',
-          like: 17
+          like: 17,
         },
         {
           id: 4,
@@ -55,11 +55,11 @@ export default {
           title: 'npm은 무엇일까',
           description: 'ttt',
           author: 'tester',
-          like: 17
+          like: 17,
         },
-      ]
+      ],
     }
-  }
+  },
 }
 </script>
 

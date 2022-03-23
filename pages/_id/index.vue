@@ -2,9 +2,7 @@
   <div>
     <div id="wrapper">
       <main>
-        <profile
-          v-bind="profile"
-        />
+        <profile v-bind="profile" />
         <posts :posts="posts" />
       </main>
     </div>
@@ -18,11 +16,11 @@ export default {
   name: 'CustomerBlog',
   components: {
     Profile,
-    Posts
+    Posts,
   },
-  asyncData({params}) {
+  asyncData({ params }) {
     return {
-      id: params.id
+      id: params.id,
     }
   },
   data() {
@@ -42,7 +40,7 @@ export default {
           thumbnail: 'http://blog.jinbo.net/attach/615/200937431.jpg',
           category: 'test',
           author: 'test',
-          createdAt: '2022-01-01'
+          createdAt: '2022-01-01',
         },
         {
           id: 1,
@@ -51,7 +49,7 @@ export default {
           thumbnail: 'http://blog.jinbo.net/attach/615/200937431.jpg',
           category: 'test',
           author: 'test',
-          createdAt: '2022-01-01'
+          createdAt: '2022-01-01',
         },
         {
           id: 2,
@@ -60,7 +58,7 @@ export default {
           thumbnail: 'http://blog.jinbo.net/attach/615/200937431.jpg',
           category: 'test',
           author: 'test',
-          createdAt: '2022-01-01'
+          createdAt: '2022-01-01',
         },
         {
           id: 4,
@@ -69,9 +67,9 @@ export default {
           thumbnail: 'http://blog.jinbo.net/attach/615/200937431.jpg',
           category: 'test',
           author: 'test',
-          createdAt: '2022-01-01'
+          createdAt: '2022-01-01',
         },
-      ]
+      ],
     }
   },
 }
