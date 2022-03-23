@@ -19,7 +19,7 @@ export default {
     }
   },
   watch: {
-    '$route' (to, from) {
+    $route (to, from) {
       this.setNickname(to.path)
     }
   },
