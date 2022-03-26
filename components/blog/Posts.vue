@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Post from './Post.vue'
+import Post from './PostBlock.vue'
 export default {
   name: 'BlogPosts',
   components: { Post },
