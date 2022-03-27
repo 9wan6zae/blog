@@ -6,9 +6,8 @@
           <p class="title">{{ title }}</p>
           <p class="description">{{ description }}</p>
         </div>
-        <h-stack class="post-info" height="20px" align-items="center">
+        <h-stack class="post-info" height="20px" align-items="center" division>
           <p class="category">{{ category }}</p>
-          <div class="divider" />
           <p class="createdAt">{{ createdAt }}</p>
         </h-stack>
       </v-stack>
@@ -84,18 +83,6 @@ export default {
 
 .post-info {
   margin: 0;
-}
-
-.post-info > p {
-  margin: 0 10px;
-}
-
-.post-info > p:first-child {
-  margin-left: 0px;
-}
-
-.post-info > p:last-child {
-  margin-right: 0px;
 }
 
 .category {
