@@ -2,8 +2,13 @@
   <div style="position: relative">
     <article id="anchor-wrapper">
       <v-stack id="anchor" width="160px">
-        <a v-for="a in anchors" :key="a.id" :href="`#${a.id}`" :style="{marginLeft: `${(a.level - 1) * 20}px`}">
-          {{a.text}}
+        <a
+          v-for="a in anchors"
+          :key="a.id"
+          :href="`#${a.id}`"
+          :style="{ marginLeft: `${(a.level - 1) * 20}px` }"
+        >
+          {{ a.text }}
         </a>
       </v-stack>
     </article>
@@ -27,7 +32,6 @@ export default {
 </script>
 
 <style scoped>
-
 #anchor-wrapper {
   position: absolute;
   left: 100%;
@@ -37,14 +41,14 @@ export default {
   position: fixed;
 }
 .anchor1 {
-  margin-left: 0
+  margin-left: 0;
 }
 
 .anchor2 {
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 .anchor3 {
-  margin-left: 40px
+  margin-left: 40px;
 }
 </style>

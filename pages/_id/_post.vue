@@ -14,6 +14,7 @@
     </h-stack>
     <!-- eslint-disable vue/no-v-html -->
     <div id="viewer" data-test="viewer" v-html="compiledMarkdown" />
+    <div style="height: 100vh" />
   </div>
 </template>
 
@@ -32,32 +33,32 @@ export default {
   data() {
     return {
       title: '타이틀입니다',
-      content: `# test\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n### test\n### test\n# test\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n### test\n### test`,
+      content: `# 가나다 라마\n# test test\n# 가나다 라마\n## test\n## test\n### abc\n### test test\n# abc\n# abc`,
       markedContent: '',
       ids: {},
-      anchors: []
+      anchors: [],
     }
   },
   computed: {
     compiledMarkdown() {
-      const renderer = new marked.Renderer();
+      const renderer = new marked.Renderer()
 
       renderer.heading = (text, level) => {
-        let id = text.replace(' ', '-');
+        let id = text.replace(' ', '-')
 
         if (id in this.ids) {
           this.ids[id].dup += 1
           id = `${id}-${this.ids[id].dup}`
         } else {
           this.ids[id] = {
-            dup: 0
+            dup: 0,
           }
         }
 
         this.anchors.push({
           text,
           id,
-          level
+          level,
         })
 
         return `
@@ -66,7 +67,7 @@ export default {
           </h${level}>
         `
       }
-      return marked(this.content, {renderer})
+      return marked(this.content, { renderer })
     },
   },
 }
