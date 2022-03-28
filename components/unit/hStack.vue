@@ -1,5 +1,8 @@
 <template>
-  <div :class="`hstack ${division ? 'division' : ''}`" :style="{ width, height, justifyContent, alignItems }">
+  <div
+    :class="`hstack ${division ? 'division' : ''}`"
+    :style="{ width, height, justifyContent, alignItems }"
+  >
     <slot></slot>
   </div>
 </template>
@@ -25,8 +28,8 @@ export default {
     },
     division: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 }
 </script>

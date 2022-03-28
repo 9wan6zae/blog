@@ -6,7 +6,9 @@
       </figure>
       <section id="content-section">
         <p id="title" data-test="content-title">{{ title }}</p>
-        <p id="description" data-test="content-description">{{ description }}</p>
+        <p id="description" data-test="content-description">
+          {{ description }}
+        </p>
       </section>
       <footer>
         <p data-test="content-author">by {{ author }}</p>

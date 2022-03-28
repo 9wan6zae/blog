@@ -1,6 +1,6 @@
 <template>
   <div id="post-wrapper">
-    <h1 id="title" data-test="title">{{title}}</h1>
+    <h1 id="title" data-test="title">{{ title }}</h1>
     <h-stack id="post-info" justify-content="space-between">
       <h-stack division>
         <p id="category" data-test="category">node</p>
@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       title: '타이틀입니다',
-      input: '# test\n## test'
+      input: '# test\n## test',
     }
   },
   computed: {
@@ -64,7 +64,7 @@ export default {
 }
 
 #createdAt {
-  color: #A6A6A7;
+  color: #a6a6a7;
 }
 
 #modify-btns > a {
