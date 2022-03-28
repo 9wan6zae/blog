@@ -1,6 +1,7 @@
 <template>
   <div id="post-wrapper">
     <h1 id="title" data-test="title">{{ title }}</h1>
+    <anchor :anchors="anchors" />
     <h-stack id="post-info" justify-content="space-between">
       <h-stack division>
         <p id="category" data-test="category">node</p>
@@ -19,9 +20,10 @@
 <script>
 import marked from 'marked'
 import hStack from '../../components/unit/hStack.vue'
+import Anchor from '../../components/post/anchor.vue'
 
 export default {
-  components: { hStack },
+  components: { hStack, Anchor },
   asyncData({ params }) {
     return {
       post: params.post,
@@ -30,12 +32,41 @@ export default {
   data() {
     return {
       title: '타이틀입니다',
-      input: '# test\n## test',
+      content: `# test\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n### test\n### test\n# test\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n## test\n여러가지 글들을 나열합니다\n### test\n### test`,
+      markedContent: '',
+      ids: {},
+      anchors: []
     }
   },
   computed: {
     compiledMarkdown() {
-      return marked(this.input)
+      const renderer = new marked.Renderer();
+
+      renderer.heading = (text, level) => {
+        let id = text.replace(' ', '-');
+
+        if (id in this.ids) {
+          this.ids[id].dup += 1
+          id = `${id}-${this.ids[id].dup}`
+        } else {
+          this.ids[id] = {
+            dup: 0
+          }
+        }
+
+        this.anchors.push({
+          text,
+          id,
+          level
+        })
+
+        return `
+          <h${level} id="${id}">
+            ${text}
+          </h${level}>
+        `
+      }
+      return marked(this.content, {renderer})
     },
   },
 }
