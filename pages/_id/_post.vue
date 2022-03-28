@@ -1,14 +1,14 @@
 <template>
   <div id="post-wrapper">
     <h1 id="title" data-test="title">{{title}}</h1>
-    <h-stack justify-content="space-between">
+    <h-stack id="post-info" justify-content="space-between">
       <h-stack division>
         <p id="category" data-test="category">node</p>
         <p id="createdAt" data-test="createdAt">2022.01.01</p>
       </h-stack>
-      <h-stack id="modify-btn" division width="10vw">
-        <p data-test="edit-btn">수정</p>
-        <p data-test="delete-btn">삭제</p>
+      <h-stack id="modify-btns" division width="10vw">
+        <a data-test="edit-btn">수정</a>
+        <a data-test="delete-btn">삭제</a>
       </h-stack>
     </h-stack>
     <!-- eslint-disable vue/no-v-html -->
@@ -46,5 +46,28 @@ export default {
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
+}
+
+#title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 58px;
+}
+
+#post-info {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#category {
+  color: var(--emphasis);
+}
+
+#createdAt {
+  color: #A6A6A7;
+}
+
+#modify-btns > a {
+  color: var(--emphasis);
 }
 </style>
