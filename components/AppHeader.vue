@@ -19,9 +19,9 @@ export default {
     }
   },
   watch: {
-    $route (to, from) {
+    $route(to, from) {
       this.setNickname(to.path)
-    }
+    },
   },
   mounted() {
     const pathname = this.$route.path
@@ -35,7 +35,7 @@ export default {
       } else {
         this.nickname = ''
       }
-    }
+    },
   },
 }
 </script>

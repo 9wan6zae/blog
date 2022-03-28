@@ -1,3 +1,7 @@
+:root {
+  --emphasis: #2bdd5d;
+}
+
 html,
 body {
   margin: 0;
