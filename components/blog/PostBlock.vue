@@ -11,14 +11,14 @@
           <p class="createdAt">{{ createdAt }}</p>
         </h-stack>
       </v-stack>
-      <img class="thumbnail" :src="thumbnail" />
+      <img class="thumbnail" :src="thumbnail" alt="thumbnail" />
     </h-stack>
   </div>
 </template>
 
 <script>
-import HStack from '../unit/hStack.vue'
-import VStack from '../unit/vStack.vue'
+import HStack from '../unit/hStack.vue';
+import VStack from '../unit/vStack.vue';
 
 export default {
   name: 'BlogPost',
@@ -49,7 +49,7 @@ export default {
       default: '',
     },
   },
-}
+};
 </script>
 
 <style scoped>

@@ -10,8 +10,9 @@
 </template>
 
 <script>
-import Posts from '../../components/blog/Posts.vue'
-import Profile from '../../components/blog/Profile.vue'
+import Posts from '../../components/blog/Posts.vue';
+import Profile from '../../components/blog/Profile.vue';
+
 export default {
   name: 'CustomerBlog',
   components: {
@@ -21,7 +22,7 @@ export default {
   asyncData({ params }) {
     return {
       id: params.id,
-    }
+    };
   },
   data() {
     return {
@@ -70,9 +71,9 @@ export default {
           createdAt: '2022-01-01',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>

@@ -16,19 +16,18 @@
 </template>
 
 <script>
-import vStack from '../unit/vStack.vue'
+import vStack from '../unit/vStack.vue';
+
 export default {
   name: 'PostAnchor',
   components: { vStack },
   props: {
     anchors: {
       type: Array,
-      default: () => {
-        return []
-      },
+      default: () => [],
     },
   },
-}
+};
 </script>
 
 <style scoped>

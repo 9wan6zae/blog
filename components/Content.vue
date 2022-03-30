@@ -2,7 +2,7 @@
   <nuxt-link :to="`/@${author}/${id}`">
     <article data-test="content">
       <figure v-if="img" data-test="content-thumbnail">
-        <img :src="img" />
+        <img :src="img" alt="thumbnail" />
       </figure>
       <section id="content-section">
         <p id="title" data-test="content-title">{{ title }}</p>
@@ -47,7 +47,7 @@ export default {
       default: 0,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

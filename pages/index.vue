@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import ContentList from '../components/ContentList.vue'
+import ContentList from '../components/ContentList.vue';
+
 export default {
   name: 'IndexPage',
   components: { ContentList },
@@ -58,9 +59,9 @@ export default {
           like: 17,
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>

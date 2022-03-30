@@ -24,7 +24,7 @@ export default {
       default: 'flex-start',
     },
   },
-}
+};
 </script>
 
 <style scoped>

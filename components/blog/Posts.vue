@@ -9,19 +9,18 @@
 </template>
 
 <script>
-import Post from './PostBlock.vue'
+import Post from './PostBlock.vue';
+
 export default {
   name: 'BlogPosts',
   components: { Post },
   props: {
     posts: {
       type: Array,
-      default: () => {
-        return []
-      },
+      default: () => [],
     },
   },
-}
+};
 </script>
 
 <style scoped>

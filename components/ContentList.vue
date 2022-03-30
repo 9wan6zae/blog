@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Content from './Content.vue'
+import Content from './Content.vue';
 
 export default {
   name: 'ContentList',
@@ -13,12 +13,10 @@ export default {
   props: {
     contents: {
       type: Array,
-      default: () => {
-        return []
-      },
+      default: () => [],
     },
   },
-}
+};
 </script>
 
 <style scoped>

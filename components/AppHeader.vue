@@ -16,28 +16,28 @@ export default {
   data() {
     return {
       nickname: '',
-    }
+    };
   },
   watch: {
-    $route(to, from) {
-      this.setNickname(to.path)
+    $route(to) {
+      this.setNickname(to.path);
     },
   },
   mounted() {
-    const pathname = this.$route.path
-    this.setNickname(pathname)
+    const pathname = this.$route.path;
+    this.setNickname(pathname);
   },
   methods: {
     setNickname(pathname) {
-      pathname = this.$route.path.slice(2)
-      if (pathname) {
-        this.nickname = pathname.split('/')[0]
+      const nickname = pathname.slice(2).split('/');
+      if (nickname) {
+        [this.nickname] = nickname;
       } else {
-        this.nickname = ''
+        this.nickname = '';
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>

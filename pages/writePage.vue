@@ -6,6 +6,7 @@
           <input
             id="title-input"
             v-model="postTitle"
+            aria-label="title"
             data-test="title-input"
             type="text"
             placeholder="제목을 입력하세요"
@@ -16,6 +17,7 @@
           id="markdown-editor"
           ref="markdownEditor"
           v-model="input"
+          aria-label="content"
           data-test="content-input"
           placeholder="글을 작성하세요"
           @input="update"
@@ -30,8 +32,8 @@
 </template>
 
 <script>
-import marked from 'marked'
-import _ from 'lodash'
+import marked from 'marked';
+import _ from 'lodash';
 
 export default {
   name: 'WritePage',
@@ -40,27 +42,29 @@ export default {
       input: '',
       postTitle: '',
       url: 'http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg',
-    }
+    };
   },
   computed: {
     compiledMarkdown() {
-      return marked(this.input)
+      return marked(this.input);
     },
   },
   methods: {
-    update: _.debounce(function (e) {
-      this.input = e.target.value
-    }, 300),
-    addImage(imgInfo) {
-      const editor = this.$refs.markdownEditor
-      const original = editor.value
-      const front = original.substring(0, editor.selectionStart)
-      const end = original.substring(editor.selectionStart, original.length)
+    update() {
+      _.debounce((e) => {
+        this.input = e.target.value;
+      }, 300);
+    },
+    addImage() {
+      const editor = this.$refs.markdownEditor;
+      const original = editor.value;
+      const front = original.substring(0, editor.selectionStart);
+      const end = original.substring(editor.selectionStart, original.length);
 
-      this.input = `${front}![](${this.url})${end}`
+      this.input = `${front}![](${this.url})${end}`;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
