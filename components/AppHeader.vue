@@ -19,21 +19,22 @@ export default {
     };
   },
   watch: {
-    $route(to) {
-      this.setNickname(to.path);
+    $route() {
+      this.setNickname();
     },
   },
   mounted() {
-    const pathname = this.$route.path;
-    this.setNickname(pathname);
+    this.setNickname();
   },
   methods: {
-    setNickname(pathname) {
-      const nickname = pathname.slice(2).split('/');
-      if (nickname) {
-        [this.nickname] = nickname;
-      } else {
-        this.nickname = '';
+    setNickname() {
+      if (this.$route) {
+        const { params } = this.$route;
+        if (params.id) {
+          this.nickname = params.id.slice(1);
+        } else {
+          this.nickname = '';
+        }
       }
     },
   },
