@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Post from '@/components/blog/Post.vue';
+import Post from '@/components/blog/PostBlock.vue';
 
 describe('Post.vue', () => {
   test('컴포넌트 렌더링', () => {
