@@ -47,9 +47,6 @@ export default {
     openModal() {
       this.open = true;
     },
-    closeModal() {
-      this.open = false;
-    },
   },
 };
 </script>
