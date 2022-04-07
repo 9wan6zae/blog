@@ -5,17 +5,24 @@
         <p v-if="nickname" id="nickname">{{ nickname }}</p>
         <p v-else id="logo">블로그</p>
       </section>
-      <p id="login-btn">로그인</p>
+      <p id="login-btn" @click="openModal">로그인</p>
     </header>
+    <login-modal v-model="open" />
   </div>
 </template>
 
 <script>
+import LoginModal from './modal/LoginModal.vue';
+
 export default {
   name: 'AppHeader',
+  components: {
+    LoginModal,
+  },
   data() {
     return {
       nickname: '',
+      open: false,
     };
   },
   watch: {
@@ -36,6 +43,9 @@ export default {
           this.nickname = '';
         }
       }
+    },
+    openModal() {
+      this.open = true;
     },
   },
 };
